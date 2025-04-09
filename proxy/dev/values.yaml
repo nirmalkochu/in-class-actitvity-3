@@ -3,7 +3,7 @@ nginx:
   namespace: nginx
   upstreamUrl: "wpapp.wpapp.svc.cluster.local"
   upstreamPort: 80
-  replicas: 2
+  replicas: 3
   image:
     repository: nginx
     tag: "1.19.10"
