@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-proxy
+  name: {{ .Values.nginx.name }}
   namespace: {{ .Values.nginx.namespace }}
 spec:
   replicas: {{ .Values.nginx.replicas }}
   selector:
     matchLabels:
-      app: nginx-proxy
+      app: {{ .Values.nginx.name }}
   template:
     metadata:
       labels:
-        app: nginx-proxy
+        app: {{ .Values.nginx.name }}
     spec:
       containers:
-        - name: nginx
+        - name: {{ .Values.nginx.name }}
           image: {{ .Values.nginx.image.repository }}:{{ .Values.nginx.image.tag }}
           volumeMounts:
             - name: nginx-config

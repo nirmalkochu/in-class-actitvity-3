@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-proxy
+  name: {{ .Values.nginx.name }}
   namespace: {{ .Values.nginx.namespace }}
 spec:
   type: {{ .Values.nginx.service.type }}

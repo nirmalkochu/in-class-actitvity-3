@@ -1,4 +1,5 @@
 nginx:
+  name: nginx-proxy
   namespace: nginx
   upstreamUrl: "wpapp.wpapp.svc.cluster.local"
   upstreamPort: 80
